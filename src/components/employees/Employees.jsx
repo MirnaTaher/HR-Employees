@@ -219,17 +219,17 @@ const Employees = () => {
           .map((employee) => {
             return (
               <div className="employees__card" key={employee.id}>
-                <div className="d-flex">
-                  <div>
+                <div className="d-flex employee-flex-direction">
+                  <div className="employee-img">
                     <img src={require("../../assets/images/christopher-campbell-rDEOVtE7vOs-unsplash.jpg")} alt={employee.name} />
                     <div>
                       <FontAwesomeIcon className="icon" icon={faPen} />
                       <FontAwesomeIcon className="icon" icon={faCirclePause} />
-                      <FontAwesomeIcon className="icon" icon={faTrash} />
+                      <FontAwesomeIcon className="icon clickable" icon={faTrash} onClick={(e)=>{setEmployees(employees.filter((elem)=> elem.id != employee.id))}} />
                     </div>
                   </div>
 
-                  <div>
+                  <div className="employee-info">
                     <h2 className="employee-name">{employee.name}</h2>
                     <p className="employee-role">{employee.role}</p>
                     <p className="employee-team">{employee.team}</p>

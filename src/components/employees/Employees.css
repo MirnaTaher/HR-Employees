@@ -52,16 +52,21 @@
 }
 
 .employees__card>div {
-    margin: 1rem;
+    margin: 0.7rem;
     padding: 0.7rem;
     box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.09);
     border: solid 1px #eaeef0;
+    background-color: white;
 }
 
 .employees__card>div img {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
+}
+.employee-info{
+    padding-left: 1.5rem;
+    border-left:#8997a441 solid 0.5px;
 }
 
 .employee-name {
@@ -114,3 +119,60 @@ input{
     border: none;
     font-family:'Font Awesome 5 Brands' !important;
 }
+.clickable{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    :root{
+        font-size: 14.5px;
+    }
+    .employees__card {
+        width: 33%;
+    }
+    .employee-info{
+        padding-left: 1rem;
+        border-left:#8997a441 solid 0.5px;
+    }
+ }
+ @media screen and (max-width: 1040px) {
+    :root{
+        font-size: 14px;
+    }
+ }
+ @media screen and (max-width: 985px) {
+    :root{
+        font-size: 13.5px;
+    }
+    .employees__card {
+        width: 50%;
+    }
+ }
+ @media screen and (max-width: 660px) {
+    :root{
+        font-size: 13px;
+    }
+ }
+ @media screen and (max-width: 550px) {
+    .employee-flex-direction{
+        flex-direction: column !important;
+        align-items: center;
+    }
+    .employee-info{
+        border-left:none;
+    }
+ }
+ @media screen and (max-width: 550px) {
+    .employee-flex-direction{
+        flex-direction: row !important;
+        align-items: center;
+    }
+    .employees__card {
+        width: 100%;
+    }
+    .employee-info{
+        padding-left: 1.5rem;
+        border-left:#8997a441 solid 0.5px;
+    }
+   
+ }
