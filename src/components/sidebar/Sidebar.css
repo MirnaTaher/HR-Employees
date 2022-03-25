@@ -1,0 +1,24 @@
+.sidebar{
+    font-family: "Roboto";
+    background-image: linear-gradient(to bottom, #39a4dc, #2763ab);
+    color: white;
+    text-align: center;
+    min-width: 6.625rem !important;
+    padding-top: 4rem;
+}
+
+.selected{
+    background-color: #2765ac;
+    border-left: solid 4px #59c203;
+}
+.sidebar-item{
+    font-family: 'Roboto', sans-serif;
+    padding: 1rem;
+}
+.sidebar-item p{
+    font-size: 0.75rem;
+    padding: 0.35rem 0;
+}
+.sidebar-icon{
+    font-size: 2rem;
+}
