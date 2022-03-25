@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPen,faCirclePause,faTrash, faPhone, faEnvelope, faExclamation } from "@fortawesome/free-solid-svg-icons";
+import { faPen,faCirclePause,faTrash, faPhone, faEnvelope, faExclamation, faPlus } from "@fortawesome/free-solid-svg-icons";
 import Modal from "react-modal";
 
 import "./Employees.css";
@@ -187,7 +187,6 @@ const Employees = () => {
 
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
-    // subtitle.style.color = "#f00";
   }
 
   function closeModal() {
@@ -195,7 +194,7 @@ const Employees = () => {
   }
   return (
     <div id="employees">
-      <div>
+      <div className="d-flex justify-content-between top-container">
         <input
           type="text"
           placeholder="Search"
@@ -203,7 +202,7 @@ const Employees = () => {
             setSearchVal(e.target.value);
           }}
         />
-        <button onClick={openModal}>+ Add new</button>
+        <button onClick={openModal} className="new-btn"><p className="d-flex align-items-center"><FontAwesomeIcon className="bold" icon={faPlus} /> Add new</p></button>
       </div>
       <div className="d-flex flex-wrap">
         {employees
